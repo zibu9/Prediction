@@ -16,11 +16,11 @@ Sub CreerColonnePrediction3()
     Set nouvelleColonne = ws.Cells(1, ws.Columns.Count).End(xlToLeft).Offset(0, 1)
     
     ' Nommer la nouvelle colonne
-    nouvelleColonne.Value = "HTU150"
+    nouvelleColonne.Value = "HTU146"
     
     ' Boucler � travers chaque ligne et ajouter les valeurs de la pr�diction
     For i = 9 To lastRow ' Commence � la ligne 2 si la premi�re ligne est un en-t�te
-        If ws.Cells(i, "U").Value < 1.50 Then
+        If ws.Cells(i, "U").Value < 1.46 Then
             nouvelleColonne.Offset(i - 1, 0).Value = "21"
         Else
             nouvelleColonne.Offset(i - 1, 0).Value = "x"
